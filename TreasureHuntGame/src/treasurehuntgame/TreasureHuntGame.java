@@ -5,7 +5,14 @@ package treasurehuntgame;
 public class TreasureHuntGame {
     public static void main(String[] args) {
         System.out.println("Welcome to the Treasure Hunt!");
-        startGame();
+        
+       //Handing for exceptions 
+        try {
+            startGame();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Caught an Array out of bounds exception in main: " + e.getMessage());
+            e.printStackTrace();
+        } 
     }
 
     public static void startGame() {
